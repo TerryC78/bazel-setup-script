@@ -1,0 +1,40 @@
+#!/bin/bash
+#
+# Environment setup script for GCE instance.
+
+# system upgrade
+sudo apt-get update -y
+sudo apt-get upgrade -y
+
+#######################################
+#
+# Required tools
+#
+#######################################
+
+# Tmux
+sudo apt-get install tmux -y
+
+# zsh
+sudo apt-get install zsh -y
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+zsh
+
+# Git
+sudo apt-get install git -y
+
+######################################
+#
+# Envoy environment
+#
+######################################
+sudo apt-get install -y pkg-config zip g++ zlib1g-dev unzip python
+wget https://github.com/bazelbuild/bazel/releases/download/0.17.2/bazel-0.17.2-installer-linux-x86_64.sh
+chmod +x bazel-0.17.2-installer-linux-x86_64.sh
+./bazel-0.17.2-installer-linux-x86_64.sh --user
+echo 'export PATH="$PATH:$HOME/bin"' >> ~/.zshrc
+source ~/.zshrc
+
+sudo apt-get install -y libtool cmake realpath clang-format-7 automake ninja-build curl
+
+
