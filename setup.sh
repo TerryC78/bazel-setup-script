@@ -19,7 +19,7 @@ sudo apt-get install tmux -y
 sudo apt-get install zsh -y
 
 # Git
-sudo apt-get install git -y
+sudo apt-get install git-all -y
 
 ######################################
 #
@@ -32,7 +32,7 @@ chmod +x bazel-0.17.2-installer-linux-x86_64.sh
 ./bazel-0.17.2-installer-linux-x86_64.sh --user
 export PATH="$PATH:$HOME/bin"
 echo 'export PATH="$PATH:$HOME/bin"' >> ~/.zshrc
-echo 'export PATH="$PATH:$HOME/bin"' >> ~/.basshrc
+echo 'export PATH="$PATH:$HOME/bin"' >> ~/.bashrc
 source ~/.bashrc
 
 # sudo apt-get install -y clang-format-7
