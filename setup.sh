@@ -17,7 +17,6 @@ sudo apt-get install tmux -y
 
 # zsh
 sudo apt-get install zsh -y
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Git
 sudo apt-get install git -y
@@ -49,3 +48,6 @@ git clone https://github.com/envoyproxy/envoy-filter-example.git
 cd envoy-filter-example
 git submodule update --init
 bazel build //:envoy
+
+# Oh my zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
