@@ -1,4 +1,5 @@
 # bazel-setup
+It currently has some bugs...
 ```
 git clone https://github.com/TerryC78/bazel-setup-script.git && cd bazel-setup-script && sudo sh setup.sh
 ```
