@@ -34,6 +34,7 @@ export PATH="$PATH:$HOME/bin"
 echo 'export PATH="$PATH:$HOME/bin"' >> ~/.zshrc
 echo 'export PATH="$PATH:$HOME/bin"' >> ~/.bashrc
 source ~/.bashrc
+sudo rm bazel-0.17.2-installer-linux-x86_64.sh
 
 # sudo apt-get install -y clang-format-7
 sudo apt-get install -y libtool cmake realpath automake ninja-build curl
