@@ -43,13 +43,13 @@ sudo apt-get install -y libtool cmake realpath automake ninja-build curl
 # Envoy filter example
 #
 ######################################
-cd $HOME
-git clone https://github.com/envoyproxy/envoy-filter-example.git
-cd envoy-filter-example
-git submodule update --init
-bazel build //:envoy
+# cd $HOME
+# git clone https://github.com/envoyproxy/envoy-filter-example.git
+# cd envoy-filter-example
+# git submodule update --init
+# bazel build //:envoy
 
 # Oh my zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-echo 'export PATH="$PATH:$HOME/bin"' >> ~/.zshrc
-export PATH="$PATH:$HOME/bin"
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# echo 'export PATH="$PATH:$HOME/bin"' >> ~/.zshrc
+# export PATH="$PATH:$HOME/bin"
