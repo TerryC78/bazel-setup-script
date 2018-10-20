@@ -31,6 +31,7 @@ wget https://github.com/bazelbuild/bazel/releases/download/0.17.2/bazel-0.17.2-i
 chmod +x bazel-0.17.2-installer-linux-x86_64.sh
 ./bazel-0.17.2-installer-linux-x86_64.sh --user
 
+export PATH="$PATH:$HOME/bin"
 echo 'export PATH="$PATH:$HOME/bin"' >> ~/.bashrc
 source ~/.bashrc
 sudo rm bazel-0.17.2-installer-linux-x86_64.sh
