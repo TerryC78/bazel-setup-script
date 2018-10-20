@@ -31,7 +31,7 @@ wget https://github.com/bazelbuild/bazel/releases/download/0.17.2/bazel-0.17.2-i
 chmod +x bazel-0.17.2-installer-linux-x86_64.sh
 ./bazel-0.17.2-installer-linux-x86_64.sh --user
 
-echo 'export PATH="$PATH:/root/bin"' >> ~/.bashrc
+echo 'export PATH="$PATH:$HOME/bin"' >> ~/.bashrc
 source ~/.bashrc
 sudo rm bazel-0.17.2-installer-linux-x86_64.sh
 
@@ -51,5 +51,5 @@ sudo apt-get install -y libtool cmake realpath automake ninja-build curl
 
 # Oh my zsh
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-# echo 'export PATH="$PATH:/root/bin"' >> ~/.zshrc
+# echo 'export PATH="$PATH:$HOME/bin"' >> ~/.zshrc
 # export PATH="$PATH:$HOME/bin"
