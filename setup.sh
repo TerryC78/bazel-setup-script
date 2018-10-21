@@ -54,7 +54,7 @@ sudo add-apt-repository \
 
 sudo apt-get update
 sudo apt-get install -y docker-ce
-sudo apt-get install -y docker-ce=18.03.1~ce-0~debian
+# sudo apt-get install -y docker-ce=18.03.1~ce-0~debian
 
 ######################################
 #
