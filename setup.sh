@@ -58,6 +58,37 @@ sudo apt-get install -y docker-ce
 
 ######################################
 #
+# Endpoints & GCE example
+#   https://cloud.google.com/endpoints/docs/openapi/get-started-compute-engine-docker
+#
+######################################
+# on laptop/workstation
+git clone https://github.com/GoogleCloudPlatform/java-docs-samples
+cd java-docs-samples/endpoints/getting-started
+vim openapi.yaml
+gcloud endpoints services deploy openapi.yaml
+
+# on GCE with Docker installed
+sudo docker network create --driver bridge esp_net
+sudo docker run --detach --name=echo --net=esp_net gcr.io/google-samples/echo-java:1.0
+sudo docker run \
+    --name=esp \
+    --detach \
+    --publish=80:8080 \
+    --net=esp_net \
+    gcr.io/endpoints-release/endpoints-runtime:1 \
+    --service=echo-api.endpoints.tianyuc-cloud-esf.cloud.goog \
+    --rollout_strategy=managed \
+    --backend=echo:8080
+    
+# Step 7: curl by
+curl --request POST \
+   --header "content-type:application/json" \
+   --data '{"message":"hello world"}' \
+   "http://[IP_ADDRESS]:80/echo?key=${ENDPOINTS_KEY}"
+
+######################################
+#
 # Envoy filter example
 #
 ######################################
