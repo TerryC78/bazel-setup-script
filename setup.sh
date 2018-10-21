@@ -8,18 +8,12 @@ sudo apt-get upgrade -y
 
 #######################################
 #
-# Required tools
+# Dev tools
 #
 #######################################
-
-# Tmux
-sudo apt-get install tmux -y
-
-# zsh
-sudo apt-get install zsh -y
-
-# Git
-sudo apt-get install git-all -y
+sudo apt-get install -y tmux \
+                        zsh \
+                        git-all
 
 ######################################
 #
