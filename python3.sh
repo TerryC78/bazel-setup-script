@@ -16,3 +16,7 @@ curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer 
 export PATH="~/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# install python 3.6.1 and set to global default
+pyenv install 3.6.1
+pyenv global 3.6.1
