@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Scripts to install pyenv and install python3 as global default version in GCE instance.
+# Scripts to install pyenv, set python3 as global default version in GCE instance.
 
 # pyenv dependencies
 # https://github.com/pyenv/pyenv/wiki/Common-build-problems
